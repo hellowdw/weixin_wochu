@@ -1,4 +1,5 @@
 const host = 'http://api5.wochu.cn/client/v1/';
+const hostCart = 'http://api4.wochu.cn/client/v1/';
 const wxRequest = (params, url) => {
     wx.showToast({
         title: '加载中',
@@ -36,7 +37,8 @@ const getActsamend = (params) => wxRequest(params,host + "actsamend")
 const getGetCategoryRecommendList = (params) => wxRequest(params,host + "goods/GetCategoryRecommendList")
 const getCategoryListByMenuId = (params) => wxRequest(params,host + 'Goods/GetCategoryListByMenuId')
 
-
+//购物车 相关
+const getShippingDateList = (params) => wxRequest(params,host + 'shopcart/GetShippingDateList')
 
 
 
@@ -45,5 +47,6 @@ module.exports = {
     getAppLayoutamend,
     getActsamend,
     getGetCategoryRecommendList,
-    getCategoryListByMenuId
+    getCategoryListByMenuId,
+    getShippingDateList
 }

@@ -1,1 +1,21 @@
-<view> 我是购物车</view>
+<view class="cartPage">
+
+  <!--顶部-->
+  <view class="topView">
+    <view class="shippingWeek">
+      <view class="shippingWeekItem" wx:for="{{deliveryTime}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek">{{item.shippingWeek}}</view>
+    </view>
+    <view class="shippingTime">
+     <block wx:for="{{shippingTimeList}}">
+     <view class="shippingTimeItem"  bindtap="tapShippingTime">{{item.shippingTime}}</view> </block>
+    </view>
+  </view>
+
+  <!--中间-->
+  <view class="middleView">
+  </view>
+
+  <!--底部-->
+  <view class="bottomView">
+  </view>
+</view>
