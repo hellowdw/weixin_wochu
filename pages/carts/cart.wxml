@@ -3,11 +3,10 @@
   <!--顶部-->
   <view class="topView">
     <view class="shippingWeek">
-      <view class="shippingWeekItem" wx:for="{{deliveryTime}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek">{{item.shippingWeek}}</view>
+      <include src="includes/cartTopViewWeek.wxml" />
     </view>
     <view class="shippingTime">
-     <block wx:for="{{shippingTimeList}}">
-     <view class="shippingTimeItem"  bindtap="tapShippingTime">{{item.shippingTime}}</view> </block>
+      <include src="includes/cartTopViewTime.wxml" />
     </view>
   </view>
 

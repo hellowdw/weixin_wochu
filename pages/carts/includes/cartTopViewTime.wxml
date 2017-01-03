@@ -1,0 +1,5 @@
+<block wx:for="{{shippingTimeList}}">
+  <view class="shippingTimeItem" wx:if="{{item.isEnable == '0' }}" style="color:#D3D3D3" bindtap="tapShippingTime">{{item.shippingTime}}</view>
+  <view class="shippingTimeItem" wx:if="{{item.isEnable == '1' && item.isCheck == '1'}}" style="color:#FFA500" bindtap="tapShippingTime">{{item.shippingTime}}</view>
+  <view class="shippingTimeItem" wx:if="{{item.isEnable == '1' && item.isCheck == '0'}}" style="color:#666666" bindtap="tapShippingTime">{{item.shippingTime}}</view>
+</block>
