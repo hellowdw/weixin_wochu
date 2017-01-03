@@ -1,5 +1,5 @@
 <block wx:for="{{deliveryTime}}">
-  <view class="shippingWeekItem" wx:if="{{item.isEnable == '0' }}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#D3D3D3">{{item.shippingWeek}}</view>
-  <view class="shippingWeekItem" wx:if="{{item.isEnable == '1' && item.isCheck == '1'}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#FFA500">{{item.shippingWeek}}</view>
-  <view class="shippingWeekItem" wx:if="{{item.isEnable == '1' && item.isCheck == '0'}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#666666">{{item.shippingWeek}}</view>
+  <view class="shippingWeekItem" wx:if="{{item.isEnable == '0' }}" data-shippingWeekItem="{{item}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#D3D3D3">{{item.shippingWeek}}</view>
+  <view class="shippingWeekItem" wx:if="{{item.isEnable == '1' && item.isCheck == '1'}}" data-shippingWeekItem="{{item}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#FFA500">{{item.shippingWeek}}</view>
+  <view class="shippingWeekItem" wx:if="{{item.isEnable == '1' && item.isCheck == '0'}}" data-shippingWeekItem="{{item}}" data-shippingTimeList="{{item.shippingTimeList}}" bindtap="tapShippingWeek" style="color:#666666">{{item.shippingWeek}}</view>
 </block>

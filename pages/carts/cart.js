@@ -7,7 +7,7 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-     this.loadTopViewData ();
+    this.loadTopViewData();
   },
   onReady: function () {
     // 页面渲染完成
@@ -69,9 +69,16 @@ Page({
         shippingTimeList: event.target.dataset.shippingtimelist,
       })
       //  this.loadTopViewData ();
+      if (event.target.dataset.shippingweekitem.isEnable == '0') {
+        wx.showToast({
+          title: event.target.dataset.shippingweekitem.sameDayEndDescribe,
+          // icon: 'success'
+        })
+      }
+
     }
   },
-  tapShippingTime:function (event) {
-    
+  tapShippingTime: function (event) {
+
   }
 })
