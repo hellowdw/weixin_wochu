@@ -1,10 +1,24 @@
 <view class="classify_page">
   <view class="classify_page_left" style="height:{{deviceHeight}}px">
-    <import src="templates/recommendeds.wxml" />
-    <template is="classify_recommendeds_left" data="{{leftArray:firstCategoryList}}" />
+    <block wx:for="{{categoryList}}" wx:key="item.id">
+        <view class="classify_recommendeds_left {{curNav == index ? 'active' : ''}}" data-index="{{index}}" id="{{item.id}}" bindtap="tapCategory">
+          {{item.name}}
+        </view>
+    </block>
   </view>
-  <view class="classify_page_right" style="height:{{deviceHeight}}px">
-    <import src="templates/recommendeds.wxml" />
-    <template is="classify_recommendeds_right" data="{{feed:feed,type:categoryType,leftOtherlist:leftOtherArray,rightBigImageArray:rightBigImageArray}}" />
+  <view class="classify_page_right" >
+    <import src="templates/commpdity_list.wxml" />
+    <template is="commpdity_wrap" data="{{rightArray:commodityList}}" />
   </view>
 </view>
+
+
+
+
+
+
+
+
+
+
+

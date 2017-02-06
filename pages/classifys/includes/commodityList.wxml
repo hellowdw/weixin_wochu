@@ -1,10 +1,10 @@
 <view class="classify_other_category">
-  <view class="bigImage">
+  <!--<view class="bigImage">
     <image src="{{rightBigImageArray.url}}" />
-  </view>
+  </view>-->
   <view class="goodsCell_flex">
-    <view class="classify_other_category_cell" wx:for="{{leftOtherlist}}">
-      <image src="{{item.checkicon}}" />
+    <view class="classify_other_category_cell" wx:for="{{rightArray}}">
+      <image src="{{item.icon}}" />
       <view class="classify_other_category_cell_text">{{item.name}}</view>
     </view>
   </view>
