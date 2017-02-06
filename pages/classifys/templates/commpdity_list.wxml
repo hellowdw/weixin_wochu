@@ -1,0 +1,16 @@
+<template name="commpdity_wrap">
+      <view class="goodsCell_flex">
+        <view class="commodity-item" wx:for="{{rightArray}}" wx:key="item.id">
+            <view class="pic">
+                <image src="{{item.icon}}" ></image>
+            </view>
+            <view class="text">
+                <view class="title">{{item.title}}</view>
+                <view class="info">
+                    <view class="price">{{item.price}}</view>
+                    <view class="count">{{item.count}}</view>
+                </view>
+            </view>                      
+        </view>  
+    </view>
+</template>
